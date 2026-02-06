@@ -26,9 +26,7 @@
       enabled = true
       port = ssh
       filter = sshd
-      logpath = /var/log/auth.log
-      maxretry = 5
-      bantime = 3600
+      # logpath not needed - systemd backend reads from journal
   notify: Restart fail2ban
 
 - name: Enable and start fail2ban
